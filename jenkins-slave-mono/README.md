@@ -8,7 +8,7 @@ This image is used to create a jenkins slave dedicated to mono/cake compilations
 ### Run
 
 ```
-$ docker run -it -d -p ${JENKINS_SSH_PORT}:22 --rm --name docker_mono xcomponent/jenkins-slave-mono:1.0.0
+$ docker run -it -d -p ${JENKINS_SSH_PORT}:22 --rm --name docker_mono xcomponent/jenkins-slave-mono:1.0.1
 ```
 * ${JENKINS_SSH_PORT}: port used by jenkins to connect to this node 
 
@@ -28,7 +28,7 @@ $ docker stop docker_mono
 ## Build this image
 
 ```
-$ docker build -t xcomponent/jenkins-slave-mono:1.0.0 .
+$ docker build -t xcomponent/jenkins-slave-mono:1.0.1 .
 ```
 
 ## GitHub project
