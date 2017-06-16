@@ -1,5 +1,7 @@
 # jenkins-slave-mono
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/xcomponent/jenkins-slave-mono.svg)](https://store.docker.com/community/images/xcomponent/jenkins-slave-mono)
+
 This image is used to create a jenkins slave dedicated to mono/cake compilations.
 > It is important to notice that git is already installed in this image.
 
