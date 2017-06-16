@@ -1,3 +1,5 @@
+[![](http://slack.xcomponent.com/badge.svg)](http://slack.xcomponent.com/)
+
 # Docker images powered by XComponent
 
 This repository contains various Docker build files for creating Docker images.
