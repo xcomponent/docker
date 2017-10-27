@@ -1,4 +1,4 @@
-# jenkins-slave-mono
+# mono-git
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/xcomponent/mono-git.svg)](https://store.docker.com/community/images/xcomponent/mono-git)
 [![](https://images.microbadger.com/badges/version/xcomponent/mono-git.svg)](https://store.docker.com/community/images/xcomponent/mono-git)
