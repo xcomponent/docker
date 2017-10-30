@@ -1,5 +1,6 @@
 FROM xcomponent/mono-git:1.0
 
+ENV CI true
 RUN apt-get -q update && \
 	apt-get install -y apt-transport-https
 
