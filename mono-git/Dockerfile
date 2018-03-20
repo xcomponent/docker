@@ -1,4 +1,4 @@
-FROM mono:5.8.0.127
+FROM mono:5.10.0.160
 
 RUN apt-get -q update && \
 	apt-get install -y \
