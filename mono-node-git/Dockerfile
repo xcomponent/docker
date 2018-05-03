@@ -1,4 +1,4 @@
-FROM xcomponent/mono-git:1.0.3
+FROM xcomponent/mono-git:1.1.0
 
 ENV CI true
 RUN apt-get -q update && \
