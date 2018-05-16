@@ -1,5 +1,5 @@
-FROM xcomponent/mono-node-git:1.2.0
-
+FROM xcomponent/mono-node-git:1.3.0
+USER root
 ENV CI true
 RUN apt-get -q update && \
     apt-get install -y \
@@ -26,3 +26,4 @@ RUN apt-get -q update && \
     g++-multilib \
     rabbitmq-server \
     && rm -rf /var/lib/apt/lists/* /tmp/*
+USER circleci
