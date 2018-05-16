@@ -1,4 +1,4 @@
-FROM xcomponent/mono-node-git:1.1.0
+FROM xcomponent/mono-node-git:1.2.0
 
 ENV CI true
 RUN apt-get -q update && \
@@ -24,4 +24,5 @@ RUN apt-get -q update && \
     libnss3-dev \
     gcc-multilib \
     g++-multilib \
-    rabbitmq-server
+    rabbitmq-server \
+    && rm -rf /var/lib/apt/lists/* /tmp/*
