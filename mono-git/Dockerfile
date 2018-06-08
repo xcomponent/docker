@@ -1,10 +1,10 @@
-FROM debian:jessie-slim
+FROM debian:stretch-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV MONO_VERSION 5.12.0.226
 
 # Set timezone to UTC by default
-RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
+RUN ln -sf /usr/share/zoneinfo/etc/UTC /etc/localtime
 
 # Use unicode
 RUN locale-gen C.UTF-8 || true
@@ -15,7 +15,7 @@ RUN apt-get -q update \
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 
-RUN echo "deb http://download.mono-project.com/repo/debian stable-jessie/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list \
+RUN echo "deb http://download.mono-project.com/repo/debian stable-stretch/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list \
     && apt-get -q update \
     && apt-get install -y \
     mono-devel \
