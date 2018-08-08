@@ -1,4 +1,4 @@
-FROM xcomponent/mono-node-git:1.3.1
+FROM xcomponent/mono-node-git:1.3.2
 USER root
 ENV CI true
 RUN apt-get -q update && \

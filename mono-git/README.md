@@ -1,6 +1,6 @@
 # mono-git
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/xcomponent/mono-git.svg)](https://store.docker.com/community/images/xcomponent/mono-git)
+[![Docker Pulls](https://img.shields.io/docker/pulls/xcomponent/mono-git.svg)](https://store.docker.com/communit2/images/xcomponent/mono-git)
 [![](https://images.microbadger.com/badges/version/xcomponent/mono-git.svg)](https://store.docker.com/community/images/xcomponent/mono-git)
 [![](https://images.microbadger.com/badges/image/xcomponent/mono-git.svg)](https://store.docker.com/community/images/xcomponent/mono-git)
 
@@ -12,13 +12,13 @@ It can be used to build mono projects in a continuous integration environment su
 ### Run
 
 ```
-$ docker run -it xcomponent/mono-git:1.3.1
+$ docker run -it xcomponent/mono-git:1.3.2
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/mono-git:1.3.1 .
+$ docker build -t xcomponent/mono-git:1.3.2 .
 ```
 
 ## GitHub project
