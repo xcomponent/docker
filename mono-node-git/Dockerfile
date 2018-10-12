@@ -1,4 +1,4 @@
-FROM xcomponent/mono-git:1.3.2
+FROM xcomponent/mono-git:1.3.3
 USER root
 ENV CI true
 ENV NPM_VERSION 6.2.0
