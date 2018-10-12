@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV MONO_VERSION 5.14.0.177
+ENV MONO_VERSION 5.16.0.179
 
 # Set timezone to UTC by default
 RUN ln -sf /usr/share/zoneinfo/etc/UTC /etc/localtime

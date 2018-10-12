@@ -12,13 +12,13 @@ It can be used to build mono projects in a continuous integration environment su
 ### Run
 
 ```
-$ docker run -it xcomponent/mono-git:1.3.2
+$ docker run -it xcomponent/mono-git:1.3.3
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/mono-git:1.3.2 .
+$ docker build -t xcomponent/mono-git:1.3.3 .
 ```
 
 ## GitHub project
