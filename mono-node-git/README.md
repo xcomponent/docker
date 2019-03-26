@@ -12,13 +12,13 @@ It can be used to build mono/node projects in a continuous integration environme
 ### Run
 
 ```
-$ docker run -it xcomponent/mono-node-git:1.3.3
+$ docker run -it xcomponent/mono-node-git:1.4.0
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/mono-node-git:1.3.3 .
+$ docker build -t xcomponent/mono-node-git:1.4.0 .
 ```
 
 ## GitHub project
