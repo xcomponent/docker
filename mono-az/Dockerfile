@@ -1,4 +1,4 @@
-FROM xcomponent/mono:1.0.0
+FROM xcomponent/mono:1.1.0
 
 USER root
 

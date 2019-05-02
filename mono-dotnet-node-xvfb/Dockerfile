@@ -1,4 +1,4 @@
-FROM xcomponent/mono-node-git-xvfb:1.3.1
+FROM xcomponent/mono-node-git-xvfb:1.5.0
 USER root
 ENV CI true
 ENV DOTNET_SDK_VERSION 2.2.203

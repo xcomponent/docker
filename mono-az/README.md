@@ -12,13 +12,13 @@ This image is based on debian stretch (jessie is no longer supported).
 ### Run
 
 ```
-$ docker run -it xcomponent/mono-az:1.0.0
+$ docker run -it xcomponent/mono-az:1.1.0
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/mono-az:1.0.0 .
+$ docker build -t xcomponent/mono-az:1.1.0 .
 ```
 
 ## GitHub project
