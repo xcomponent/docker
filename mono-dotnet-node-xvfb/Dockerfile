@@ -13,9 +13,9 @@ RUN apt-get -q update && \
     libstdc++6 \
     zlib1g && \
 # Install OpenJDK-8 && Fix certificate issues
-    apt-get install -y openjdk-8-jdk && \
-    apt-get install -y ant && \
-    apt-get install ca-certificates-java && \
+    openjdk-8-jdk \
+    ant \
+    ca-certificates-java && \
     apt-get clean && \
     update-ca-certificates -f && \
 	rm -rf /var/lib/apt/lists/* /tmp/*
