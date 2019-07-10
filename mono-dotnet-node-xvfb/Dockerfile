@@ -11,16 +11,14 @@ RUN apt-get -q update && \
     liblttng-ust0 \
     libssl1.0.2 \
     libstdc++6 \
-    zlib1g \
-    && rm -rf /var/lib/apt/lists/* /tmp/*
-
+    zlib1g && \
 # Install OpenJDK-8 && Fix certificate issues
-RUN apt-get update && \
     apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
     apt-get install ca-certificates-java && \
     apt-get clean && \
-    update-ca-certificates -f;
+    update-ca-certificates -f && \
+	rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Setup JAVA_HOME -- useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
