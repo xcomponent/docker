@@ -14,14 +14,10 @@ RUN apt-get -q update && \
     zlib1g \
     && rm -rf /var/lib/apt/lists/* /tmp/*
 
-# Install OpenJDK-8
+# Install OpenJDK-8 && Fix certificate issues
 RUN apt-get update && \
     apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
-    apt-get clean;
-
-# Fix certificate issues
-RUN apt-get update && \
     apt-get install ca-certificates-java && \
     apt-get clean && \
     update-ca-certificates -f;
