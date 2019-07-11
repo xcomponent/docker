@@ -4,6 +4,7 @@ ENV CI true
 ENV DOTNET_SDK_VERSION 2.2.203
 RUN apt-get -q update && \
     apt-get install -y \
+    ant \
     libc6 \
     libgcc1 \
     libgssapi-krb5-2 \
@@ -11,14 +12,11 @@ RUN apt-get -q update && \
     liblttng-ust0 \
     libssl1.0.2 \
     libstdc++6 \
-    zlib1g && \
-# Install OpenJDK-8 && Fix certificate issues
     openjdk-8-jdk \
-    ant \
+    zlib1g \
     ca-certificates-java && \
-    apt-get clean && \
     update-ca-certificates -f && \
-	rm -rf /var/lib/apt/lists/* /tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Setup JAVA_HOME -- useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
