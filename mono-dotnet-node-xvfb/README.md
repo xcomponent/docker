@@ -12,13 +12,13 @@ It can be used to build mono/node projects in a continuous integration environme
 ### Run
 
 ```
-$ docker run -it xcomponent/mono-dotnet-node-xvfb:1.3.0
+$ docker run -it xcomponent/mono-dotnet-node-xvfb:1.7.0
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/mono-dotnet-node-xvfb:1.3.0 .
+$ docker build -t xcomponent/mono-dotnet-node-xvfb:1.7.0 .
 ```
 
 ## GitHub project

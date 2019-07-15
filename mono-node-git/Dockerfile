@@ -1,7 +1,7 @@
-FROM xcomponent/mono-git:1.5.0
+FROM xcomponent/mono-git:1.6.0
 USER root
 ENV CI true
-ENV NPM_VERSION 6.4.1
+ENV NPM_VERSION 6.9.0
 RUN apt-get -q update && \
     apt-get install -y apt-transport-https
 
