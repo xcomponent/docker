@@ -1,8 +1,10 @@
 FROM mono:6.4.0
 USER root
 
+LABEL maintainer="XComponent Team <dev@xcomponent.com>"
+HEALTHCHECK NONE
+
 ENV CI true
-ENV DOTNET_SDK_VERSION 2.2.401
 ENV DEBIAN_FRONTEND=noninteractive
 ENV NPM_VERSION 6.9.0
 
