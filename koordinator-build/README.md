@@ -1,4 +1,4 @@
-# mono-git
+# koordinator-build
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/xcomponent/koordinator-build.svg)](https://store.docker.com/communit2/images/xcomponent/koordinator-build)
 
@@ -18,6 +18,6 @@ $ docker run -it xcomponent/koordinator-build:1.0.0
 $ docker build -t xcomponent/koordinator-build:1.0.0 .
 ```
 
-## GitHub project
+## Dockerfile
 
-[https://github.com/xcomponent/docker](https://github.com/xcomponent/docker)
+[https://github.com/xcomponent/docker/blob/master/koordinator-build/Dockerfile](https://github.com/xcomponent/docker/blob/master/koordinator-build/Dockerfile)
