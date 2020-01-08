@@ -78,6 +78,12 @@ RUN groupadd --gid 3434 circleci \
     && echo 'circleci ALL=NOPASSWD: ALL' >> /etc/sudoers.d/50-circleci \
     && echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
 
+# Add SSL certificates
+
+RUN cert-sync /etc/ssl/certs/ca-certificates.crt \
+    && curl https://curl.haxx.se/ca/cacert.pem > ~/cacert.pem \
+    && sudo cert-sync ~/cacert.pem
+
 # Add complementary packages
 
 RUN apt-get -q update && \
