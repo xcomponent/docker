@@ -1,4 +1,4 @@
-FROM mono:6.6.0
+FROM mono:6.8.0
 USER root
 
 LABEL maintainer="XComponent Team <dev@xcomponent.com>"
