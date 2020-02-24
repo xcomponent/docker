@@ -69,7 +69,7 @@ RUN chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 RUN chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 RUN apt-get -q update && \
     apt-get install -y \
-    dotnet-sdk-2.2
+    dotnet-sdk-3.1
 
 # Create circleci user
 
