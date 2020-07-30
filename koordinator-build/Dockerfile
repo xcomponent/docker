@@ -1,4 +1,4 @@
-FROM mono:6.8.0
+FROM mono:6.10.0
 USER root
 
 LABEL maintainer="XComponent Team <dev@xcomponent.com>"
@@ -99,7 +99,6 @@ RUN apt-get -q update && \
     libdbus-1-dev \
     libgtk2.0-dev \
     libnotify-dev \
-    libgnome-keyring-dev \
     libgconf2-dev \
     libasound2-dev \
     libcap-dev \
