@@ -1,4 +1,4 @@
-FROM mono:6.8.0
+FROM mono:6.10.0
 
 LABEL maintainer="XComponent Team <dev@xcomponent.com>"
 HEALTHCHECK NONE

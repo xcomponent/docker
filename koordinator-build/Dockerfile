@@ -99,6 +99,7 @@ RUN apt-get -q update && \
     libdbus-1-dev \
     libgtk2.0-dev \
     libnotify-dev \
+    libgbm-dev \
     libgconf2-dev \
     libasound2-dev \
     libcap-dev \
