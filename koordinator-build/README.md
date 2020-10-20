@@ -9,13 +9,13 @@ This image is used to get a build environment for Koordinator.
 ### Run
 
 ```
-$ docker run -it xcomponent/koordinator-build:1.0.0
+$ docker run -it xcomponent/koordinator-build:1.3
 ```
 
 ## Build this image
 
 ```
-$ docker build -t xcomponent/koordinator-build:1.0.0 .
+$ docker build -t xcomponent/koordinator-build:1.3 .
 ```
 
 ## Dockerfile

@@ -1,0 +1,59 @@
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.4.0
+  azure-aks: circleci/azure-aks@0.2.0
+  azure-cli: circleci/azure-cli@1.1.0
+  helm: circleci/helm@0.2.3
+
+references:
+  job_filters_tags_and_branches: &job_filters_tags_and_branches
+    tags:
+      only: /^koordinator-build-([0-9.]+)/
+    branches:
+      ignore: /.*/
+  job_filters_branches_only: &job_filters_branches_only
+    branches:
+      only: /.*/
+
+jobs:
+  checkout:
+    docker:
+      - image: circleci/node:14.5
+    resource_class: small
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - .
+
+  koordinatorBuild:
+    docker:
+      - image: cimg/base:2020.10-20.04
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /home/circleci/project
+      - setup_remote_docker:
+          docker_layer_caching: false
+      - run:
+          name: Koordinator Build - Build docker image
+          working_directory: koordinator-build
+          command: |
+            docker build --build-arg circleci_gid=1002 --build-arg circleci_uid=1001 . --tag xcomponent/koordinator-build:${CIRCLE_TAG//koordinator-build-/}-machine-executor
+      - run:
+          name: Koordinator Build - Push image to DockerHub
+          command: |
+            echo $DOCKERHUB_PASSWORD | docker login -u xcomponentteam --password-stdin
+            docker push xcomponent/koordinator-build:${CIRCLE_TAG//koordinator-build-/}-machine-executor
+
+workflows:
+  build_and_push_images:
+    jobs:
+      - checkout:
+          filters: *job_filters_tags_and_branches
+      - koordinatorBuild:
+          filters: *job_filters_tags_and_branches
+          requires:
+            - checkout

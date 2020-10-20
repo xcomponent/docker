@@ -71,13 +71,6 @@ RUN apt-get -q update && \
     apt-get install -y \
     dotnet-sdk-3.1
 
-# Create circleci user
-
-RUN groupadd --gid 3434 circleci \
-    && useradd --uid 3434 --gid circleci --shell /bin/bash --create-home circleci \
-    && echo 'circleci ALL=NOPASSWD: ALL' >> /etc/sudoers.d/50-circleci \
-    && echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
-
 # Add SSL certificates
 
 RUN cert-sync /etc/ssl/certs/ca-certificates.crt \
@@ -111,5 +104,15 @@ RUN apt-get -q update && \
     g++-multilib \
     rabbitmq-server \
     && rm -rf /var/lib/apt/lists/* /tmp/*
+
+# Create circleci user
+
+ARG circleci_gid=3434
+ARG circleci_uid=3434
+
+RUN groupadd --gid $circleci_gid circleci \
+    && useradd --uid $circleci_uid --gid circleci --shell /bin/bash --create-home circleci \
+    && echo 'circleci ALL=NOPASSWD: ALL' >> /etc/sudoers.d/50-circleci \
+    && echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
 
 USER circleci
