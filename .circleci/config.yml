@@ -19,7 +19,7 @@ references:
 jobs:
   checkout:
     docker:
-      - image: circleci/node:14.17
+      - image: circleci/node:14.18
     resource_class: small
     steps:
       - checkout
