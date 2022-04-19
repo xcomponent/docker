@@ -15,12 +15,4 @@ RUN set -ex \
     && mv /tmp/docker/* /usr/bin \
     && rm -rf /tmp/docker /tmp/docker.tgz \
     && which docker \
-    && (docker version || true) \
-    && mkdir -vp ~/.docker/cli-plugins/ \
-    && curl --silent -L --output ~/.docker/cli-plugins/docker-buildx https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64 \
-    && chmod a+x ~/.docker/cli-plugins/docker-buildx \
-    && docker buildx install \
-    && docker buildx version \
-    && docker run --privileged --rm tonistiigi/binfmt --install all \
-    && docker context create xbuilder \
-    && docker buildx create xbuilder --name xbuilder --use 
+    && (docker version || true) 
