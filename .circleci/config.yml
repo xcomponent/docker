@@ -4,7 +4,7 @@ orbs:
   win: circleci/windows@4.1.1
   azure-aks: circleci/azure-aks@0.3.0
   azure-cli: circleci/azure-cli@1.2.2
-  helm: circleci/helm@1.2.0
+  helm: circleci/helm@2.0.0
 
 references:
   job_filters_tags_and_branches: &job_filters_tags_and_branches
