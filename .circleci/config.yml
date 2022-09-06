@@ -30,7 +30,7 @@ jobs:
 
   koordinatorBuild:
     docker:
-      - image: cimg/base:2022.08-20.04
+      - image: cimg/base:2022.09-20.04
     resource_class: small
     steps:
       - attach_workspace:
