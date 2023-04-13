@@ -68,8 +68,8 @@ RUN mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 RUN chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 RUN chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 RUN apt-get -q update && \
-    apt-get install -y \
-    dotnet-sdk-6.0
+    apt-get install -y dotnet-sdk-5.0 && \
+	apt-get install -y dotnet-sdk-6.0
 
 # Add SSL certificates
 
